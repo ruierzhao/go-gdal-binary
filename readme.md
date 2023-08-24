@@ -26,7 +26,7 @@ vcpkg install gdal:x64-windows
 ## 测试C语言环境
 - 我是把编译好的头文件放到`mingw`对应目录下，但是编译c语言测试程序时能找到头文件，找不到库文件，加了编译参数也不行，但是在`vs`里面就没问题。
 
-- 我的编译命令是这个``` g++ -I D:\DEV\gdal\include -LD:\DEV\gdal\lib -lgdal  -o mainc.exe main.c ``` ，会报这个错：`undefined reference to 'GDALAllRegister'` 或者这个``` ld: cannot find -lgdal ```,具体原因不清楚
+- 我的编译命令是这个``` g++ -I D:\DEV\gdal\include -LD:\DEV\gdal\lib -lgdal  -o mainc.exe main.c ``` ，会报这个错：`undefined reference to 'GDALAllRegister'` 或者这个``` ld: cannot find -lgdal ```,未解决。
 
 - 如果测试go环境时要把main.c注释，不然go编译器会一起编译c语言
 
@@ -219,6 +219,7 @@ func main() {
 ```
 
 ## 编译`geos`库
-- 编译的gdal应该是包含了geos库了，具体没测试过，先这样把
+- 编译的gdal应该是包含了geos库了，具体没测试过，先这样把。
+- 
 
 
